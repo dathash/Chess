@@ -1,0 +1,157 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Resources/board_alt.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Pawn.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Main.gd" type="Script" id=3]
+[ext_resource path="res://Resources/text.png" type="Texture" id=4]
+[ext_resource path="res://Resources/numbers.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Bishop.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Rook.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Queen.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Knight.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/King.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Board.gd" type="Script" id=11]
+
+[node name="Board" type="Node2D"]
+script = ExtResource( 11 )
+
+[node name="BoardAlt" type="Sprite" parent="."]
+position = Vector2( 128, 128 )
+texture = ExtResource( 1 )
+
+[node name="Numbers" type="Sprite" parent="."]
+position = Vector2( 24, 127 )
+texture = ExtResource( 5 )
+
+[node name="Text" type="Sprite" parent="."]
+position = Vector2( 127, 246 )
+texture = ExtResource( 4 )
+
+[node name="Pieces" type="Node2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="A Pawn" parent="Pieces" instance=ExtResource( 2 )]
+position = Vector2( 52, 184 )
+
+[node name="B Pawn" parent="Pieces" instance=ExtResource( 2 )]
+position = Vector2( 73, 184 )
+
+[node name="C Pawn" parent="Pieces" instance=ExtResource( 2 )]
+position = Vector2( 95, 183 )
+
+[node name="D Pawn" parent="Pieces" instance=ExtResource( 2 )]
+position = Vector2( 117, 183 )
+
+[node name="E Pawn" parent="Pieces" instance=ExtResource( 2 )]
+position = Vector2( 138, 182 )
+
+[node name="F Pawn" parent="Pieces" instance=ExtResource( 2 )]
+position = Vector2( 159, 183 )
+
+[node name="G Pawn" parent="Pieces" instance=ExtResource( 2 )]
+position = Vector2( 183, 183 )
+
+[node name="H Pawn" parent="Pieces" instance=ExtResource( 2 )]
+position = Vector2( 207, 182 )
+
+[node name="Light Bishop" parent="Pieces" instance=ExtResource( 6 )]
+position = Vector2( 161, 205 )
+
+[node name="Dark Bishop" parent="Pieces" instance=ExtResource( 6 )]
+position = Vector2( 95, 205 )
+
+[node name="King\'s Rook" parent="Pieces" instance=ExtResource( 7 )]
+position = Vector2( 203, 207 )
+
+[node name="Queen\'s Rook" parent="Pieces" instance=ExtResource( 7 )]
+position = Vector2( 50, 205 )
+
+[node name="Queen" parent="Pieces" instance=ExtResource( 8 )]
+position = Vector2( 118, 204 )
+
+[node name="Queen\'s Knight" parent="Pieces" instance=ExtResource( 9 )]
+position = Vector2( 72, 204 )
+
+[node name="King\'s Knight" parent="Pieces" instance=ExtResource( 9 )]
+position = Vector2( 182, 204 )
+
+[node name="King" parent="Pieces" instance=ExtResource( 10 )]
+position = Vector2( 138, 204 )
+
+[node name="Light Bishop2" parent="Pieces" instance=ExtResource( 6 )]
+position = Vector2( 95, 50 )
+white = false
+
+[node name="Dark Bishop2" parent="Pieces" instance=ExtResource( 6 )]
+position = Vector2( 161, 51 )
+white = false
+
+[node name="King2" parent="Pieces" instance=ExtResource( 10 )]
+position = Vector2( 139, 49 )
+white = false
+
+[node name="King\'s Knight2" parent="Pieces" instance=ExtResource( 9 )]
+position = Vector2( 183, 51 )
+white = false
+
+[node name="Queen\'s Knight2" parent="Pieces" instance=ExtResource( 9 )]
+position = Vector2( 72, 51 )
+white = false
+
+[node name="Queen2" parent="Pieces" instance=ExtResource( 8 )]
+position = Vector2( 117, 51 )
+white = false
+
+[node name="Queen\'s Rook2" parent="Pieces" instance=ExtResource( 7 )]
+position = Vector2( 50, 50 )
+white = false
+
+[node name="King\'s Rook2" parent="Pieces" instance=ExtResource( 7 )]
+position = Vector2( 205, 50 )
+white = false
+
+[node name="A Pawn2" parent="Pieces" instance=ExtResource( 2 )]
+position = Vector2( 51, 72 )
+white = false
+
+[node name="B Pawn2" parent="Pieces" instance=ExtResource( 2 )]
+position = Vector2( 73, 73 )
+white = false
+
+[node name="C Pawn2" parent="Pieces" instance=ExtResource( 2 )]
+position = Vector2( 96, 73 )
+white = false
+
+[node name="D Pawn2" parent="Pieces" instance=ExtResource( 2 )]
+position = Vector2( 118, 72 )
+white = false
+
+[node name="E Pawn2" parent="Pieces" instance=ExtResource( 2 )]
+position = Vector2( 138, 74 )
+white = false
+
+[node name="F Pawn2" parent="Pieces" instance=ExtResource( 2 )]
+position = Vector2( 160, 74 )
+white = false
+
+[node name="G Pawn2" parent="Pieces" instance=ExtResource( 2 )]
+position = Vector2( 183, 74 )
+white = false
+
+[node name="H Pawn2" parent="Pieces" instance=ExtResource( 2 )]
+position = Vector2( 204, 74 )
+white = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 218.0
+margin_top = 38.0
+margin_right = 256.0
+margin_bottom = 84.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="WhiteKingCastle" from="Pieces/King" to="Pieces" method="_on_King_WhiteKingCastle"]
+[connection signal="WhiteQueenCastle" from="Pieces/King" to="Pieces" method="_on_King_WhiteQueenCastle"]
+[connection signal="BlackKingCastle" from="Pieces/King2" to="Pieces" method="_on_King2_BlackKingCastle"]
+[connection signal="BlackQueenCastle" from="Pieces/King2" to="Pieces" method="_on_King2_BlackQueenCastle"]
